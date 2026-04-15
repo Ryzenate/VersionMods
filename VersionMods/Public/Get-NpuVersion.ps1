@@ -17,7 +17,6 @@ function Get-NpuVersion {
             }
             return $result #$driver.DriverVersion
         } else {
-            Write-Log "No driver found for the NPU device."
             $result = New-Object PSObject -Property @{
                 Version = "NA"
                 FinalMessage = "NPU device detected but no driver information available."

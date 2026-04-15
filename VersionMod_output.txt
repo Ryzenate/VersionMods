@@ -1,0 +1,87 @@
+1)	UPDATE / REFRESH PSM1 PACKAGE Zip
+PS B:\src_b\Work_AMD\PSM1_TEST> . 'B:\src_b\Work_AMD\PSM1_TEST\Solution2_DeepSeek\Zip-MyMods.ps1'
+Created B:\src_b\Work_AMD\PSM1_TEST\Solution2_DeepSeek\Deploy-VersionMods\VersionMods.zip successfully
+Press Enter to continue...: 
+PS B:\src_b\Work_AMD\PSM1_TEST> dir
+
+2)	Deploy PSM1
+OPEN Admin Powershell Window… go into Deploy-VersionMods and type “Deploy-VersionMods.ps1 -Force”
+
+3)	USE ANYWHERE!
+
+PS B:\src_b\Work_AMD\PSM1_TEST\Solution2_DeepSeek\Deploy-VersionMods> Get-OsBuild
+
+Caption        : Microsoft Windows 11 Pro
+BuildNumber    : 26200
+Architecture   : 64-bit
+Version        : 10.0.26200
+InstallDate    : 2025-07-20
+LastBootUpTime : 2026-04-12 17:06:05
+
+Sent: Tuesday, April 14, 2026 6:54 PM
+Subject: PSM1 Version Mod
+ 
+##-----------------------
+## DEPLOYMENT OUTPUT:
+##-----------------------
+    Directory: B:\src_b\Work_AMD\PSM1_TEST\Solution2_DeepSeek\Deploy-VersionMods
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         1/24/2026   9:58 PM          11945 Deploy-VersionMods.ps1
+-a----         1/24/2026   9:59 PM           2581 README.txt
+-a----         4/14/2026   6:47 PM           3669 VersionMods.zip
+
+\PSM1_LibMods\VersionMod_PSM1\Deploy-VersionMods> .\Deploy-VersionMods.ps1
+
+[2026-04-14 18:50:21] [INFO] ================================================
+[2026-04-14 18:50:21] [INFO] VersionMods Deployment Script (PS 5.1 Compatible)
+[2026-04-14 18:50:21] [INFO] Start Time: 2026-04-14 18:50:21
+[2026-04-14 18:50:21] [INFO] ================================================
+[2026-04-14 18:50:21] [INFO] Running with Administrator privileges
+[2026-04-14 18:50:21] [INFO] Found module ZIP file: B:\src_b\Work_AMD\PSM1_TEST\Solution2_DeepSeek\Deploy-VersionMods\VersionMods.zip
+[2026-04-14 18:50:21] [WARNING] Module already exists at: C:\Program Files\WindowsPowerShell\Modules\VersionMods
+[2026-04-14 18:50:21] [WARNING] Use -Force parameter to overwrite existing module.
+[2026-04-14 18:50:21] [INFO] Current installed version: 1.0.0.0
+
+\PSM1_LibMods\VersionMod_PSM1\Deploy-VersionMods> .\Deploy-VersionMods.ps1 -Force
+[2026-04-14 18:50:34] [INFO] ================================================
+[2026-04-14 18:50:34] [INFO] VersionMods Deployment Script (PS 5.1 Compatible)
+[2026-04-14 18:50:34] [INFO] Start Time: 2026-04-14 18:50:34
+[2026-04-14 18:50:34] [INFO] ================================================
+[2026-04-14 18:50:34] [INFO] Running with Administrator privileges
+[2026-04-14 18:50:34] [INFO] Found module ZIP file: B:\src_b\Work_AMD\PSM1_TEST\Solution2_DeepSeek\Deploy-VersionMods\VersionMods.zip
+[2026-04-14 18:50:34] [INFO] Removing existing module at: C:\Program Files\WindowsPowerShell\Modules\VersionMods
+[2026-04-14 18:50:34] [INFO] Creating extraction directory: C:\Users\IONATE~1\AppData\Local\Temp\VersionMods_20260414185034
+[2026-04-14 18:50:34] [INFO] Extracting module from: B:\src_b\Work_AMD\PSM1_TEST\Solution2_DeepSeek\Deploy-VersionMods\VersionMods.zip
+[2026-04-14 18:50:34] [INFO] Verified extracted module structure
+[2026-04-14 18:50:34] [INFO] Creating target directory: C:\Program Files\WindowsPowerShell\Modules\VersionMods
+[2026-04-14 18:50:34] [INFO] Copying module files to target directory
+[2026-04-14 18:50:34] [INFO] Cleaning up temporary files
+[2026-04-14 18:50:34] [INFO] Module deployed successfully to: C:\Program Files\WindowsPowerShell\Modules\VersionMods
+[2026-04-14 18:50:34] [INFO] Deployed 7 files
+[2026-04-14 18:50:34] [INFO] Verifying module installation...
+[2026-04-14 18:50:34] [INFO] Refreshing module cache...
+[2026-04-14 18:50:44] [INFO] Module registered in PowerShell: 1.0.0.0
+[2026-04-14 18:50:44] [INFO] Module imported successfully
+[2026-04-14 18:50:44] [INFO] Function available: Get-BiosVersion
+[2026-04-14 18:50:44] [INFO] Function available: Get-GraphicsVersion
+[2026-04-14 18:50:44] [INFO] Function available: Get-OsBuild
+[2026-04-14 18:50:44] [INFO] Get-BiosVersion executed successfully
+[2026-04-14 18:50:44] [INFO] Module manifest verified at: C:\Program Files\WindowsPowerShell\Modules\VersionMods\VersionMods.psd1
+[2026-04-14 18:50:44] [INFO] Module Name: VersionMods
+[2026-04-14 18:50:44] [INFO] Version: 1.0.0.0
+[2026-04-14 18:50:44] [INFO] Description: Module for retrieving BIOS, Graphics, and OS version information
+[2026-04-14 18:50:44] [INFO] ================================================
+[2026-04-14 18:50:44] [INFO] DEPLOYMENT COMPLETED SUCCESSFULLY
+[2026-04-14 18:50:44] [INFO] ================================================
+[2026-04-14 18:50:44] [INFO] Module Location: C:\Program Files\WindowsPowerShell\Modules\VersionMods
+[2026-04-14 18:50:44] [INFO]
+[2026-04-14 18:50:44] [INFO] Usage Instructions:
+[2026-04-14 18:50:44] [INFO] 1. For immediate use: Import-Module VersionMods
+[2026-04-14 18:50:44] [INFO] 2. Available functions:
+[2026-04-14 18:50:44] [INFO]    - Get-BiosVersion
+[2026-04-14 18:50:44] [INFO]    - Get-GraphicsVersion
+[2026-04-14 18:50:44] [INFO]    - Get-OsBuild
+[2026-04-14 18:50:44] [INFO] 3. Functions will auto-load when called (PowerShell 3.0+)
+[2026-04-14 18:50:44] [INFO] ================================================
+[2026-04-14 18:50:44] [INFO] Deployment marker created: C:\Program Files\WindowsPowerShell\Modules\VersionMods\.deployed

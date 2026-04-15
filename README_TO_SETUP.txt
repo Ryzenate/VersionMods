@@ -10,12 +10,21 @@ README.txt
    (EX: DIR: B:\src_b\Work_AMD\PSM1_TEST\Solution2_DeepSeek\Deploy-VersionMods\)
    (EX: ZIP: "B:\src_b\Work_AMD\PSM1_TEST\Solution2_DeepSeek\Deploy-VersionMods\VersionMods.zip")
 4. CD into deployment directory, run Deployment PS1
-   (EX: Open Powershell as Admin; CD B:\src_b\Work_AMD\PSM1_TEST\Solution2_DeepSeek\Deploy-VersionMods\;
-   (EX: .\Deploy-VersionMods.ps1 -Force
+   EX: Open Powershell as Admin; CD B:\src_b\Work_AMD\PSM1_TEST\Solution2_DeepSeek\Deploy-VersionMods\;
+   EX: .\Deploy-VersionMods.ps1 -Force
 5. Verify cmdlets are available to use. List the last imported modules...
    >> $LastMods = (Get-Module | Select-Object -Last 1).ExportedCommands.Key
 
+Checking DEPLOYED FLAG CHECKPOINT CREATED:
+-==-=-=--=-=-=-==-=-=--=-=-=-=-==-=-=--=-=-=
+PS C:\Program Files\WindowsPowerShell\Modules\VersionMods> type .\.deployed                                                                             
+Deployed: 2026-04-14 20:55:49
+Script: Deploy-VersionMods.ps1
+User: ionatexas
+Computer: DESKTOP-NGOLCK6
+PS C:\Program Files\WindowsPowerShell\Modules\VersionMods> 
 
+#--------------------------------------------
 EXAMPLE OUTPUT (use to verify):
 
 PS B:\src_b\Work_AMD\PSM1_TEST\Solution2_DeepSeek\Deploy-VersionMods> .\Deploy-VersionMods.ps1 -Force
